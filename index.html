@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selective 1 — Luxury Limo & Black Car Service</title>
+  <meta name="description" content="Selective 1 is a luxury limousine and black car service providing airport transfers, corporate travel, and special event transportation." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- You can replace this with an actual logo image later -->
+        <span class="logo-mark">S1</span>
+        <span class="logo-text">Selective 1</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact" class="btn btn-nav">Book Now</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Luxury Limo & Black Car Service</h1>
+        <p>
+          Selective 1 provides professional, on-time, and discreet transportation for
+          airport transfers, corporate travel, and special events across Los Angeles.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Request a Quote</a>
+          <a href="tel:+15555551234" class="btn btn-ghost">Call: (818) 290-4191</a>
+        </div>
+        <div class="hero-tags">
+          <span>Airport Transfers</span>
+          <span>Corporate</span>
+          <span>Weddings & Events</span>
+          <span>24/7 Service</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Instant Ride Inquiry</h2>
+        <form class="booking-form" id="heroBookingForm">
+          <div class="field">
+            <label for="pickup">Pickup Location</label>
+            <input type="text" id="pickup" name="pickup" placeholder="Airport, hotel, address..." required />
+          </div>
+          <div class="field">
+            <label for="dropoff">Drop-off Location</label>
+            <input type="text" id="dropoff" name="dropoff" placeholder="Destination address" required />
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="field">
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="passengers">Passengers</label>
+            <select id="passengers" name="passengers">
+              <option value="1">1 passenger</option>
+              <option value="2">2 passengers</option>
+              <option value="3">3 passengers</option>
+              <option value="4">4 passengers</option>
+              <option value="5">5 passengers</option>
+              <option value="6">6 passengers</option>
+              <option value="7+">7+ passengers</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Inquiry</button>
+          <p class="form-note">We’ll contact you with pricing and availability.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        Premium door-to-door transportation tailored for business and leisure.
+      </p>
+
+      <div class="grid services-grid">
+        <div class="card">
+          <h3>Airport Transfers</h3>
+          <p>
+            Reliable pickups and drop-offs to all major airports. Flight tracking,
+            curbside or meet-and-greet options, and professional chauffeurs.
+          </p>
+          <ul class="card-list">
+            <li>LAX • BUR • LGB • SNA</li>
+            <li>Flight monitoring & wait time</li>
+            <li>Corporate and VIP service</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Corporate Travel</h3>
+          <p>
+            Impress clients and executives with seamless transportation for meetings,
+            conferences, and daily routes.
+          </p>
+          <ul class="card-list">
+            <li>Executive sedans & SUVs</li>
+            <li>Hourly charters</li>
+            <li>Account billing available</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Events & Special Occasions</h3>
+          <p>
+            Weddings, nights out, concerts, and celebrations—arrive in style and
+            enjoy the ride while we handle the rest.
+          </p>
+          <ul class="card-list">
+            <li>Weddings & proms</li>
+            <li>Winery & city tours</li>
+            <li>Custom itineraries</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Section -->
+  <section id="fleet" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Our Fleet</h2>
+      <p class="section-subtitle">
+        Clean, comfortable, and fully insured vehicles driven by professional chauffeurs.
+      </p>
+
+      <div class="grid fleet-grid">
+        <div class="card fleet-card">
+          <div class="fleet-image placeholder-image">
+            <!-- Replace with real car photo later -->
+            <span>SUV</span>
+          </div>
+          <h3>Luxury SUV</h3>
+          <p>Ideal for airport trips, executives, and small groups.</p>
+          <ul class="card-list">
+            <li>Up to 6 passengers</li>
+            <li>Premium leather interior</li>
+            <li>Privacy glass & climate control</li>
+          </ul>
+        </div>
+
+        <div class="card fleet-card">
+          <div class="fleet-image placeholder-image">
+            <span>Sedan</span>
+          </div>
+          <h3>Executive Sedan</h3>
+          <p>Perfect for solo travelers and couples needing smooth city rides.</p>
+          <ul class="card-list">
+            <li>Up to 3 passengers</li>
+            <li>Quiet and comfortable</li>
+            <li>Ideal for corporate clients</li>
+          </ul>
+        </div>
+
+        <div class="card fleet-card">
+          <div class="fleet-image placeholder-image">
+            <span>Sprinter</span>
+          </div>
+          <h3>Sprinter / Van (On Request)</h3>
+          <p>Great for groups, events, and family trips with luggage.</p>
+          <ul class="card-list">
+            <li>Up to 12–14 passengers</li>
+            <li>Spacious luggage area</li>
+            <li>Event & tour packages</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="fleet-note">
+        Looking for something specific? <a href="#contact">Contact us</a> and we’ll tailor a vehicle to your needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div>
+        <h2 class="section-title">About Selective 1</h2>
+        <p>
+          Selective 1 is a family-owned black car and limousine service built on
+          professionalism, safety, and reliability. With years of experience serving
+          clients across Southern California, we understand the importance of being
+          on time, every time.
+        </p>
+        <p>
+          Whether you’re catching a flight, meeting an important client, or celebrating
+          a special milestone, our goal is to provide a smooth, stress-free ride
+          from pickup to drop-off.
+        </p>
+      </div>
+
+      <div class="about-highlights">
+        <div class="highlight">
+          <span class="highlight-number">24/7</span>
+          <span class="highlight-label">Availability</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-number">5★</span>
+          <span class="highlight-label">Service</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-number">Pro</span>
+          <span class="highlight-label">Chauffeurs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle">
+        Real feedback from riders who trust Selective 1 for their transportation.
+      </p>
+
+      <div class="grid testimonials-grid">
+        <div class="card testimonial-card">
+          <p class="quote">
+            “Driver was on time, car was spotless, and the whole experience was smooth.
+            I use Selective 1 for all my airport runs now.”
+          </p>
+          <p class="quote-author">— J. R., Business Traveler</p>
+        </div>
+
+        <div class="card testimonial-card">
+          <p class="quote">
+            “We booked them for our wedding and everything was perfect. Professional,
+            patient, and very easy to work with.”
+          </p>
+          <p class="quote-author">— S. K., Wedding Client</p>
+        </div>
+
+        <div class="card testimonial-card">
+          <p class="quote">
+            “Reliable and affordable compared to other limo services we’ve tried in LA.
+            Highly recommend.”
+          </p>
+          <p class="quote-author">— A. P., Local Resident</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Booking Section -->
+  <section id="contact" class="section section-contact">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="section-title">Get a Quote or Book a Ride</h2>
+        <p>
+          Fill out the form with your trip details and we’ll respond with pricing and
+          availability. For urgent trips, call or text us directly.
+        </p>
+
+        <div class="contact-details">
+          <p><strong>Phone:</strong> <a href="tel:+15555551234">(555) 555-1234</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@selective1.com">info@selective1.com</a></p>
+          <p><strong>Service Area:</strong> Greater Los Angeles & Southern California</p>
+        </div>
+      </div>
+
+      <form class="booking-form" id="contactForm">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="field-grid">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-1234" required />
+          </div>
+        </div>
+        <div class="field-grid">
+          <div class="field">
+            <label for="tripDate">Trip Date</label>
+            <input type="date" id="tripDate" name="tripDate" />
+          </div>
+          <div class="field">
+            <label for="tripTime">Trip Time</label>
+            <input type="time" id="tripTime" name="tripTime" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="pickupAddress">Pickup Address</label>
+          <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Pickup address or airport" />
+        </div>
+        <div class="field">
+          <label for="dropoffAddress">Drop-off Address</label>
+          <input type="text" id="dropoffAddress" name="dropoffAddress" placeholder="Drop-off address" />
+        </div>
+        <div class="field">
+          <label for="serviceType">Service Type</label>
+          <select id="serviceType" name="serviceType">
+            <option value="">Select service</option>
+            <option value="airport">Airport Transfer</option>
+            <option value="corporate">Corporate Travel</option>
+            <option value="event">Event / Wedding</option>
+            <option value="hourly">Hourly / As Directed</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Additional Details</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Flight number, number of passengers, luggage, special requests..."
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+        <p class="form-note">We typically respond within a few hours.</p>
+        <p class="form-success" id="formSuccess" hidden>Your request has been captured. (Demo only)</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Selective 1. All rights reserved.</p>
+      <p class="footer-meta">Licensed & insured black car and limousine service.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
