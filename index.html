@@ -49,7 +49,7 @@
         </p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">Request a Quote</a>
-          <a href="tel:+15555551234" class="btn btn-ghost">Call: (818) 290-4191</a>
+          <a href="tel:+18182904191" class="btn btn-ghost">Call: (818) 290-4191</a>
         </div>
         <div class="hero-tags">
           <span>Airport Transfers</span>
@@ -61,7 +61,14 @@
 
       <div class="hero-card">
         <h2>Instant Ride Inquiry</h2>
-        <form class="booking-form" id="heroBookingForm">
+        <form
+          name="hero-booking"
+          method="POST"
+          data-netlify="true"
+          class="booking-form"
+          id="heroBookingForm"
+        >
+          <input type="hidden" name="form-name" value="hero-booking" />
           <div class="field">
             <label for="pickup">Pickup Location</label>
             <input type="text" id="pickup" name="pickup" placeholder="Airport, hotel, address..." required />
@@ -288,13 +295,20 @@
         </p>
 
         <div class="contact-details">
-          <p><strong>Phone:</strong> <a href="tel:+15555551234">(555) 555-1234</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+18182904191">(818) 290-4191</a></p>
           <p><strong>Email:</strong> <a href="mailto:info@selective1.com">info@selective1.com</a></p>
           <p><strong>Service Area:</strong> Greater Los Angeles & Southern California</p>
         </div>
       </div>
 
-      <form class="booking-form" id="contactForm">
+      <form
+        name="contact-request"
+        method="POST"
+        data-netlify="true"
+        class="booking-form"
+        id="contactForm"
+      >
+        <input type="hidden" name="form-name" value="contact-request" />
         <div class="field">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />
