@@ -67,83 +67,92 @@
         </div>
       </div>
 
-      <!-- HERO FORM (NETLIFY) -->
+            <!-- HERO FORM (NETLIFY) -->
       <div class="hero-card">
-        <h2>Instant Ride Inquiry</h2>
+        <h2>Go anywhere with Selective One</h2>
         <p class="hero-card-sub">
-          Send your trip details and we’ll text or email you a quote.
+          Send your pickup and drop-off — we’ll reply with a quote.
         </p>
 
         <form
           name="hero-booking"
           method="POST"
           netlify
-          class="booking-form"
+          class="hero-quick-form"
         >
           <input type="hidden" name="form-name" value="hero-booking" />
 
-          <div class="field">
-            <label for="pickup">Pickup Location</label>
-            <input
-              id="pickup"
-              type="text"
-              name="pickup"
-              placeholder="Airport, hotel, home address"
-              required
-            />
+          <!-- Ride type -->
+          <div class="hero-chip-row">
+            <button type="button" class="hero-chip hero-chip--active" data-ride-type="now">
+              Ride now
+            </button>
+            <button type="button" class="hero-chip" data-ride-type="later">
+              Schedule for later
+            </button>
+            <input type="hidden" name="rideType" id="rideType" value="now" />
           </div>
 
-          <div class="field">
-            <label for="dropoff">Drop-off Location</label>
-            <input
-              id="dropoff"
-              type="text"
-              name="dropoff"
-              placeholder="Destination address"
-              required
-            />
-          </div>
-
-          <div class="field-grid">
-            <div class="field">
-              <label for="date">Date</label>
-              <input id="date" type="date" name="date" required />
-            </div>
-            <div class="field">
-              <label for="time">Time</label>
-              <input id="time" type="time" name="time" required />
+          <!-- Pickup -->
+          <div class="hero-field">
+            <label for="pickup" class="hero-field-label">Pickup location</label>
+            <div class="hero-field-inner">
+              <span class="hero-field-icon">●</span>
+              <input
+                id="pickup"
+                type="text"
+                name="pickup"
+                placeholder="Airport, hotel, home address"
+                required
+              />
             </div>
           </div>
 
-          <div class="field-grid">
-            <div class="field">
-              <label for="passengers">Passengers</label>
-              <select id="passengers" name="passengers">
-                <option value="1">1 passenger</option>
-                <option value="2">2 passengers</option>
-                <option value="3">3 passengers</option>
-                <option value="4">4 passengers</option>
-                <option value="5">5 passengers</option>
-                <option value="6">6 passengers</option>
-                <option value="7+">7+ passengers</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="contactMethod">Preferred Contact</label>
-              <select id="contactMethod" name="contactMethod">
-                <option value="phone">Phone</option>
-                <option value="text">Text</option>
-                <option value="email">Email</option>
-              </select>
+          <!-- Dropoff -->
+          <div class="hero-field">
+            <label for="dropoff" class="hero-field-label">Drop-off location</label>
+            <div class="hero-field-inner">
+              <span class="hero-field-icon hero-field-icon--square">■</span>
+              <input
+                id="dropoff"
+                type="text"
+                name="dropoff"
+                placeholder="Destination address"
+                required
+              />
             </div>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-full">
-            Submit Inquiry
+          <!-- Contact -->
+          <div class="hero-field">
+            <label for="contact" class="hero-field-label">Best way to contact you</label>
+            <div class="hero-field-inner">
+              <span class="hero-field-icon">@</span>
+              <input
+                id="contact"
+                type="text"
+                name="contactInfo"
+                placeholder="Phone or email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Optional small row -->
+          <div class="hero-field hero-field--inline">
+            <label for="passengers" class="hero-field-label">Passengers</label>
+            <select id="passengers" name="passengers">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5+">5+</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full hero-submit">
+            See quote options
           </button>
-          <p class="form-note">
-            We typically respond within a few hours during normal business times.
-          </p>
         </form>
       </div>
     </div>
